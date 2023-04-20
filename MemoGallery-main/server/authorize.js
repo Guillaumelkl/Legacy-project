@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
-const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const PRIVATE_KEY = process.env.PRIVATE;
 
 const verifyToken = async (req, res, next) => {
   try {
@@ -9,7 +9,7 @@ const verifyToken = async (req, res, next) => {
     }
     const token = await req.headers.authorization.split(" ")[1];
     if (!token) {
-      res.status(401).send({ message: "Token not valid..." });
+      res.status(401).send({ message: "Token not valid..."});
     }
     let validToken = jwt.verify(token, PRIVATE_KEY);
 
