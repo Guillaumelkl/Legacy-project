@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    display: grid;
+    padding: 12px;
+    margin: 3px;
+    background-color: rgb(243, 179, 102);
+    height: 50vh;
+    border-radius: 20px;
+    border: 1px solid blueviolet;
+}
+
+.imageSection{
+    display: flex;
+    justify-content: flex-start;
+}
