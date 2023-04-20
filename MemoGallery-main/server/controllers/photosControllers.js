@@ -37,8 +37,34 @@ const like = async(req,res)=>{
       res.send(updatedLikes)
 }
 
+const deletePhoto = async(req,res)=>{
+  try { const photoId = req.params.id
+     const toDelete = await photosModel.deleteOne({photoId})
+  res.send({msg:'photoDeleted', toDelete})
+  console.log(toDelete)
+    
+  } catch (error) {
+    res.sen(error)
+    console.log(error)
+  }
+ 
+
+}
+
+const deletedAll = async (req, res) => {
+  try {const deleteAll = await photosModel.deleteMany();
+    res.send({msg:'deleted all', deleteAll});
+    
+  } catch (error) {
+    res.send({msg:"all are deleted"})
+  }
+   
+};
+
 module.exports = {
   postPhotos,
   getPhotos,
   like,
+  deletePhoto,
+  deletedAll
 };

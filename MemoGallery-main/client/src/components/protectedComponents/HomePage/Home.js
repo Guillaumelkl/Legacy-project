@@ -1,9 +1,12 @@
 import "./cards.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Deletephotobtn from "./Deletephotobtn";
+import { deletePhoto } from "../../../../../server/controllers/photosControllers";
+
 function HomePage() {
   const [photos, setPhotos] = useState([]);
-
+ 
   async function getAllPhotos() {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -29,9 +32,14 @@ function HomePage() {
       } else {
         return photo;
       }
+
     });
     setPhotos(updatedPhotosWithLikes);
-  }
+  
+}
+
+
+
 
   useEffect(() => {
     getAllPhotos();
@@ -52,10 +60,13 @@ function HomePage() {
               >
                 like{photo.likes}
               </button>
-              <input type={photo._id} />
+              <input type={photo._id} />            
             </div>
           );
         })}
+      </div>
+      <div>
+      <button onClick={handleDelete}>Delete All</button>
       </div>
     </>
   );

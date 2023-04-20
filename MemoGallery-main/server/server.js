@@ -4,7 +4,7 @@ const freeRoutes = require("./routes/freeRoutes");
 const cors = require("cors");
 require("./database/dbConnection");
 
-const Port = process.env.PORT || 8080;
+const Port = 8080;
 const app = express();
 
 app.use(express.json());
