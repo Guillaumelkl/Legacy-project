@@ -36,23 +36,35 @@ function HomePage() {
   useEffect(() => {
     getAllPhotos();
   }, []);
+
+  async function handleDelete() {
+    await axios
+      .delete("http://localhost:8080/auth/delete")
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
   return (
     <>
-      <div className='card-wrapper'>
+      <div className="card-wrapper">
         {photos.map((photo) => {
           return (
-            <div className='card' key={photo._id}>
+            <div className="card" key={photo._id}>
               <div>
-                {photo.photoUrl && <img src={photo.photoUrl} alt='photo' />}
+                {photo.photoUrl && <img src={photo.photoUrl} alt="photo" />}
               </div>
               <p>{photo.description}</p>
               <button
-                className='likeButton'
+                className="likeButton"
                 onClick={() => likeButton(photo._id)}
               >
                 like{photo.likes}
               </button>
               <input type={photo._id} />
+              <button onClick={handleDelete}>Delete</button>
             </div>
           );
         })}
