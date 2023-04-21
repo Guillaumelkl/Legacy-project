@@ -1,4 +1,5 @@
 const photosModel = require("../models/photosModel");
+const mongoose = require('mongoose');
 
 const postPhotos = async (req, res) => {
   const { photoUrl, description } = req.body;
@@ -38,9 +39,10 @@ const like = async (req, res) => {
 
 const deletePhoto = async (req, res) => {
   try {
-    const toDelete = await photosModel.deleteOne({ _id: req.params.id });
-    res.send({ msg: "photoDeleted", toDelete });
-    console.log(toDelete);
+    let id = req.params.id;
+    const toDelete = await photosModel.deleteOne({_id: mongoose.Types.ObjectId(id)});
+    res.status(200).send({ msg: "photoDeleted", toDelete });
+    console.log("toDelete");
   } catch (error) {
     res.send(error);
     console.log(error);

@@ -43,7 +43,7 @@ function HomePage() {
   async function handleDelete() {
     
     await axios
-      .delete("http://localhost:8080/auth/delete",)
+      .delete("http://localhost:8080/auth/deleteAll")
       .then((response) => {
         navigate("/postPhotos");
         window.location.reload()
