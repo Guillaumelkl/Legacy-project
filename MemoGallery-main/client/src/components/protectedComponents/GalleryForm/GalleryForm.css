@@ -6,17 +6,18 @@
 
 .main{
     display: flex;
-    justify-content: center;
+    justify-content:flex-end;
 }
 
 form{
     display: grid;
     padding: 12px;
     margin: 3px;
-    background-color: rgb(243, 179, 102);
+    background-color: white;
     height: 50vh;
+    width: 100vh;
     border-radius: 20px;
-    border: 1px solid blueviolet;
+    border: 1px solid black;
 }
 
 .imageSection{

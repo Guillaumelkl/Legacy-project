@@ -12,17 +12,14 @@ function Deletephotobtn() {
           })
           .catch(error => {
             console.log(error)
-          });
-      
-      
+          });      
 
 }
 
   return (
     < > 
       <button onClick={handleDelete}>Deletephotobtn</button>
-    </>
-    
+    </>  
   )
 }
 

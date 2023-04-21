@@ -9,7 +9,7 @@ const verifyToken = async (req, res, next) => {
     }
     const token = await req.headers.authorization.split(" ")[1];
     if (!token) {
-      res.status(401).send({ message: "Token not valid..." });
+      res.status(401).send({ message: "Token not valid..."});
     }
     let validToken = jwt.verify(token, PRIVATE_KEY);
 

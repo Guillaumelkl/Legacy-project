@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import "./GalleryForm.css";
 import axios from "axios";
+import {useNavigate} from "react-router-dom"
+
+
 function GalleryForm() {
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
   const [file, setFile] = useState();
+  const navigate = useNavigate();
   /* using useRef hook to clean the input after adding the photo */
   const inputRef = useRef(null)
 
@@ -28,6 +32,7 @@ function GalleryForm() {
         }
     })
       .then((res) => alert(res.data));
+      navigate("/postPhotos")
   }
 
   const clearInput = ()=>{

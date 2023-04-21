@@ -1,12 +1,12 @@
 import "./cards.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import Deletephotobtn from "./Deletephotobtn";
-import { deletePhoto } from "../../../../../server/controllers/photosControllers";
+import {useNavigate} from "react-router-dom"
 
 function HomePage() {
-  const [photos, setPhotos] = useState([]);
- 
+  const [photos, setPhotos] = useState([true]);
+  const navigate = useNavigate();
+
   async function getAllPhotos() {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -32,42 +32,53 @@ function HomePage() {
       } else {
         return photo;
       }
-
     });
     setPhotos(updatedPhotosWithLikes);
-  
-}
-
-
-
+  }
 
   useEffect(() => {
     getAllPhotos();
   }, []);
+ 
+  async function handleDelete() {
+    
+    await axios
+      .delete("http://localhost:8080/auth/delete",)
+      .then((response) => {
+        navigate("/postPhotos");
+        window.location.reload()
+        console.log("photo deleted");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
   return (
     <>
-      <div className='card-wrapper'>
+      <div className="card-wrapper">
         {photos.map((photo) => {
           return (
-            <div className='card' key={photo._id}>
+            
+            <div className="card" key={photo._id}>
+              
               <div>
-                {photo.photoUrl && <img src={photo.photoUrl} alt='photo' />}
+                {photo.photoUrl && <img src={photo.photoUrl} alt="photo" />}
               </div>
               <p>{photo.description}</p>
               <button
-                className='likeButton'
+                className="likeButton"
                 onClick={() => likeButton(photo._id)}
               >
                 like{photo.likes}
               </button>
-              <input type={photo._id} />            
+              <input type={photo._id} />
+              
             </div>
+            
           );
         })}
       </div>
-      <div>
-      <button onClick={handleDelete}>Delete All</button>
-      </div>
+      <button onClick={handleDelete}>Delete</button>
     </>
   );
 }

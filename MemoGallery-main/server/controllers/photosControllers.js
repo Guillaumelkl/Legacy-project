@@ -15,50 +15,45 @@ const postPhotos = async (req, res) => {
   }
 };
 
-const getPhotos = async(req,res) => {
-  try{
+const getPhotos = async (req, res) => {
+  try {
     const photos = await photosModel.find();
     res.send(photos);
-  }catch(error){
+  } catch (error) {
     res.status(500).send("Unable to retrieve photos...");
   }
+};
 
-}
-
-const like = async(req,res)=>{
-  let id = req.params.id
-  let photo = await photosModel.findById(id)
-  if(!photo){
-      res.send({msg:"photo not found"})
+const like = async (req, res) => {
+  let id = req.params.id;
+  let photo = await photosModel.findById(id);
+  if (!photo) {
+    res.send({ msg: "photo not found" });
   }
-      photo.likesNum = photo.likesNum+1
-      console.log(photo.likesNum)
-      let updatedLikes = await photo.save()
-      res.send(updatedLikes)
-}
+  photo.likesNum = photo.likesNum + 1;
+  console.log(photo.likesNum);
+  let updatedLikes = await photo.save();
+  res.send(updatedLikes);
+};
 
-const deletePhoto = async(req,res)=>{
-  try { const photoId = req.params.id
-     const toDelete = await photosModel.deleteOne({photoId})
-  res.send({msg:'photoDeleted', toDelete})
-  console.log(toDelete)
-    
+const deletePhoto = async (req, res) => {
+  try {
+    const toDelete = await photosModel.deleteOne({ _id: req.params.id });
+    res.send({ msg: "photoDeleted", toDelete });
+    console.log(toDelete);
   } catch (error) {
-    res.sen(error)
-    console.log(error)
+    res.send(error);
+    console.log(error);
   }
- 
+};
 
-}
-
-const deletedAll = async (req, res) => {
-  try {const deleteAll = await photosModel.deleteMany();
-    res.send({msg:'deleted all', deleteAll});
-    
+const deleteAll = async (req, res) => {
+  try {
+    const deleteP = await photosModel.deleteMany()
+    res.send({msg: "deleted!", deleteP})
   } catch (error) {
-    res.send({msg:"all are deleted"})
+    res.send(error)
   }
-   
 };
 
 module.exports = {
@@ -66,5 +61,5 @@ module.exports = {
   getPhotos,
   like,
   deletePhoto,
-  deletedAll
+  deleteAll,
 };

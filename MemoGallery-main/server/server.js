@@ -12,6 +12,7 @@ app.use(cors());
 app.use("/", freeRoutes);
 app.use("/auth", protectedRoutes);
 
+
 app.listen(Port, () => {
   console.log(`Server is listening on port ${Port}`);
 });

@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 
 import "./Nav.css";
 
-const Navbar = ({userState}) => {
+const Navbar = () => {
+  const token = localStorage.token
   return (
     <>
-      {userState ? (
+      {token ? (
         <nav className='nav'>
           <ul>
             <Link to='/' className='title'>
