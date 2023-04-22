@@ -11,9 +11,9 @@ const {
 } = require("../controllers/photosControllers");
 
 router.post("/postPhotos", authorize, postPhotos);
-router.get("/getPhotos", getPhotos);
-router.put("/likes/:id",authorize, like);
-router.delete("/deleteAll/", deleteAll)
+router.get("/getPhotos",authorize, getPhotos);
+router.put("/likes/:id", like);
+router.delete("/deleteAll",authorize, deleteAll)
 router.delete("/delete/:id", deletePhoto)
 
 module.exports = router;
