@@ -25,7 +25,10 @@ const getPhotos = async (req, res) => {
   }
 };
 
+
+
 const like = async (req, res) => {
+  
   let id = req.params.id;
   let photo = await photosModel.findById(id);
   if (!photo) {
@@ -39,6 +42,23 @@ const like = async (req, res) => {
   console.log(photo.likesNum);
   let updatedLikes = await photo.save();
   res.send(updatedLikes);
+};
+
+const favoritePhoto = async (req, res) => {
+  try {
+    const favoritePhoto = [];
+    let likesNum = req.params;
+    const photos = await photosModel.find({ likesNum: { $gt: 0 } });
+    // if (likesNum >= 0) {
+    //   console.log(true);
+    //   //favoritePhoto.push(photos)
+    // }
+    favoritePhoto.push(photos);
+    console.log(favoritePhoto);
+    res.send(photos);
+  } catch (error) {
+    res.status(500).send("Unable to retrieve photos...");
+  }
 };
 
 const deletePhoto = async (req, res) => {
@@ -68,4 +88,5 @@ module.exports = {
   like,
   deletePhoto,
   deleteAll,
+  favoritePhoto
 };

@@ -12,9 +12,9 @@ const Navbar = () => {
             <Link to='/' className='title'>
               MemoGallery
             </Link>
-            <Link to='/homePage'>Your Photos</Link>
-            <Link to='/postPhotos'>Post a Photo</Link>
-            <Link to='/favourites'>Your favourite Photos</Link>
+            <Link to='/homePage'>Photos</Link>
+            <Link to='/postPhotos'>Post Photo</Link>
+            <Link to='/favourites'> Favourite Photos</Link>
             <Link to='/logout'>Log out</Link>
           </ul>
         </nav>
