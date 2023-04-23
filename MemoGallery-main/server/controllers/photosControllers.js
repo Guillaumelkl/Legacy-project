@@ -49,10 +49,6 @@ const favoritePhoto = async (req, res) => {
     const favoritePhoto = [];
     let likesNum = req.params;
     const photos = await photosModel.find({ likesNum: { $gt: 0 } });
-    // if (likesNum >= 0) {
-    //   console.log(true);
-    //   //favoritePhoto.push(photos)
-    // }
     favoritePhoto.push(photos);
     console.log(favoritePhoto);
     res.send(photos);

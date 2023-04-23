@@ -14,7 +14,7 @@ const Navbar = () => {
             </Link>
             <Link to='/homePage'>Photos</Link>
             <Link to='/postPhotos'>Post Photo</Link>
-            <Link to='/favourites'> Favourite Photos</Link>
+            <Link to='/favourites'> Favorite Photos</Link>
             <Link to='/logout'>Log out</Link>
           </ul>
         </nav>
