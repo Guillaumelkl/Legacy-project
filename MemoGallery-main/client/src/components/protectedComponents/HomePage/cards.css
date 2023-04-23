@@ -5,17 +5,18 @@
     grid-template-columns:1fr 1fr 1fr;
     gap: 0.3rem;
     padding: 2rem;
-    border: 1px solid green;
-    width: 100%;
-    height: 100%;
+    border: none;
+    gap: 20px;
+    max-width: 120vh;
+    max-height: 200vh;
 }
 
 
 img{
     width: 100%;
-    height: 100%;
-    padding: 5px;
-    border-radius: 20px;
+    height: 25vw;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 img:hover{
@@ -24,22 +25,27 @@ img:hover{
 
 .card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border: 1px solid black;
+    border-radius: 15px;
+    
     /* background-color: rebeccapurple; */
 }
-.card p{
-    display: none;
-   
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
 }
 
+
+
 .card .likeButton{
-    display: none;
+    gap: 5px;
    
 }
 .card:hover p{  
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     display:block;
     gap: 1rem;
-    background-color: red;
     overflow-wrap: break-word;
 
 }

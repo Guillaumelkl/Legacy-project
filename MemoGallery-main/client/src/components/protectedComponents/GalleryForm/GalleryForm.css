@@ -7,16 +7,24 @@
 .main{
     display: flex;
     justify-content: center;
+    
+    
 }
 
+
 form{
+    
     display: grid;
-    padding: 12px;
+    padding: 3rem;
     margin: 3px;
-    background-color: rgb(243, 179, 102);
+    background-color: rgb(39, 39, 66);
+    color: white;
     height: 50vh;
     border-radius: 20px;
     border: 1px solid blueviolet;
+    max-width:fit-content;
+    max-height: fit-content;
+
 }
 
 .imageSection{

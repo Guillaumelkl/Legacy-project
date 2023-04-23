@@ -52,7 +52,8 @@ function HomePage() {
           Authorization: `Bearer ${token}`,
         },
       })
-      .then((response) => {
+      
+      .then((response) => { 
         navigate("/postPhotos");
         window.location.reload();
         console.log(response);
@@ -63,15 +64,10 @@ function HomePage() {
   }
 
   async function handleDeleteOne(id) {
-     await axios.delete(`http://localhost:8080/auth/delete/${id}`)
-      .then((response) => {
-        navigate("/homePage");
-        window.location.reload();
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    await axios.delete(`http://localhost:8080/auth/delete/${id}`);
+    // photos.filter((photo) => {
+      window.location.reload();
+    // });
   }
   
   return (
@@ -82,8 +78,8 @@ function HomePage() {
             
             <div className="card" key={photo._id}>
               
-              <div>
-                {photo.photoUrl && <img src={photo.photoUrl} alt="photo" />}
+              <div type="file" name="file">
+                {photo.photoUrl && <img src={photo.photoUrl} alt="" />}
               </div>
               <p>{photo.description}</p>
               <button
@@ -93,7 +89,7 @@ function HomePage() {
                 like{photo.likes}
               </button>
               <input type={photo._id} />
-              <button onClick={handleDeleteOne}>Delete</button>
+              <button onClick={()=> handleDeleteOne(photo._id)}>Delete</button>
             </div>
             
           );
