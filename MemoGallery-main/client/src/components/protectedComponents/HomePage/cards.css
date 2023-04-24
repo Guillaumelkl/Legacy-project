@@ -7,7 +7,7 @@
     padding: 2rem;
     border: none;
     gap: 20px;
-    max-width: 120vh;
+    max-width: 180vh;
     max-height: 200vh;
 }
 
@@ -15,18 +15,19 @@
 img{
     width: 100%;
     height: 25vw;
-    object-fit: cover;
+    object-fit:cover;
     border-radius: 10px;
+    
 }
 
 img:hover{
-    height: 80%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .card{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
     border-radius: 15px;
-    box-shadow: 5px 5px 10px 10px rgb(0 0 0 / 0.2);
+    box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 0.2);
     
     /* background-color: rebeccapurple; */
 }
@@ -39,18 +40,74 @@ img:hover{
 
 
 .card .likeButton{
+    position: relative;right: 90px;bottom: 4rem;
+    border-radius: 35px;
+    width: 2.5rem;
+    height: 2.5rem;
     gap: 5px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 0.2);
+    background-color: white;
    
 }
-.card:hover p{  
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    display:block;
+.card> p{  
+    height: 3rem;
     gap: 1rem;
     overflow-wrap: break-word;
 
 }
 
-.card:hover .likeButton{  
-    display:block;
+.card > button:active{  
+    box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 0.2);
+  transform: translateY(4px);
 }
 
+#delBtn{
+    position: relative;left: 6.5rem;top: 2px;
+    border-radius: 35px;
+    width: 1rem;
+    height: 1rem;
+    gap: 5px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 0.2);
+    background-color: white;
+
+}
+#delBtn:hover{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: red; 
+    color: white;
+    background-image: linear-gradient(to bottom right, rgb(253, 160, 160) 10%, rgb(227, 0, 0));
+      
+}
+
+#delBtn:active{
+    box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 0.2);
+  transform: translateY(3px);
+}
+
+#delBtnAll{
+    border-radius: 10px;
+    width: 4.5rem;
+    height: 2.5rem;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 0.2);
+    background-image: linear-gradient(to bottom right, rgb(246, 246, 246) 70%, lightgrey);
+
+}
+
+#delBtnAll:hover{
+    border-radius: 10px;
+    width: 4.5rem;
+    height: 2.8rem;
+    background-color: red; 
+    color: white;
+    background-image: linear-gradient(to bottom right, rgb(253, 160, 160) 10%, rgb(227, 0, 0));
+      
+}
+
+#delBtn:active{
+    box-shadow: 1px 1px 1px 1px rgb(0 0 0 / 0.2);
+  transform: translateY(10px);
+}

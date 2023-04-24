@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import {useNavigate} from "react-router-dom";
 import PostLoginData from "./PostLoginData";
+import "./LoginForm.css"
 
 const LoginForm = (props) => {
   const navigate = useNavigate();

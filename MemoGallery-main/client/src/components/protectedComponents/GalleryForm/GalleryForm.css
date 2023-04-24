@@ -31,3 +31,23 @@ form{
     display: flex;
     justify-content: flex-start;
 }
+#txtArea{
+    height: 3rem;
+    
+    
+}
+#txtArea:hover{
+    height: 5rem;
+}
+
+#addPht{
+    border-radius: 10px;
+    width: 9rem;
+}
+
+#addPht:hover{
+    background-color: rgb(87, 182, 255);
+    border: none;
+}
+
+

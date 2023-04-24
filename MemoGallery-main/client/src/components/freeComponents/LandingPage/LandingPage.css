@@ -1,0 +1,27 @@
+
+
+.Landing-Page{
+background-image: url('https://wallpapers.com/images/hd4/acropolis-in-athens-greece-zuz7d9egxlsbcara.jpg');
+  background-size: cover;
+  animation: diaporama 120s infinite;
+  
+
+}
+
+@keyframes diaporama {
+    0% {
+      background-image: url('https://wallpapers.com/images/hd4/acropolis-in-athens-greece-zuz7d9egxlsbcara.jpg');
+    }
+    25% {
+      background-image: url('https://c4.wallpaperflare.com/wallpaper/132/818/377/eiffel-tower-cityscape-city-landmark-wallpaper-preview.jpg');
+    }
+    50% {
+      background-image: url('https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80');
+    }
+    75% {
+      background-image: url('https://c0.wallpaperflare.com/preview/583/812/855/seoul-south-korea-gyeongbokgung-palace-korea.jpg');
+    }
+    100% {
+      background-image: url('https://wallpapers.com/images/featured/rio-de-janeiro-d8f020n7kiyvc721.jpg');
+    }
+  }

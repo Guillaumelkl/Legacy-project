@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import PostRegistData from "./PostRegistData";
 
+
 const RegistrationForm = () => {
   const {
     register,
