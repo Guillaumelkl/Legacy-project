@@ -44,6 +44,8 @@ const like = async (req, res) => {
   res.send(updatedLikes);
 };
 
+// add the favorite photo in the backend and display it with a new router to display it on the favorite page
+
 const favoritePhoto = async (req, res) => {
   try {
     const favoritePhoto = [];
@@ -57,6 +59,8 @@ const favoritePhoto = async (req, res) => {
   }
 };
 
+// add the delete button to remove a specific button 
+
 const deletePhoto = async (req, res) => {
   try {
     let {id} = req.params;
@@ -68,6 +72,8 @@ const deletePhoto = async (req, res) => {
     console.log(error);
   }
 };
+
+//delete all to be able to delete all photos directly
 
 const deleteAll = async (req, res) => {
   try {
