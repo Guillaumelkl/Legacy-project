@@ -22,13 +22,14 @@ Front page
 
 
 Regiser
-![Register](readmepics/register.png)
+![register](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/de40f26c-37b9-4244-89e3-8f88ebce59f9)
 
 Login
-![Login](readmepics/login.png)
+![login](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/f394392a-c0ea-474e-b5a4-66d9f07c787d)
 
 Add photo
-![Add photo](readmepics/addphoto.png)
+![addphoto](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/1dd46cea-ab2d-45d8-80b3-df77926b9169)
 
 Display pictures
-![Display pictures](readmepics/displayphoto.png)
+![displayphoto](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/9e936d0c-c684-43db-aa5c-4bb3130824d9)
+
