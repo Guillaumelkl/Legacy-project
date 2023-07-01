@@ -17,7 +17,9 @@ The  purpose of the project is the user to upload pictures that he wants to shar
 
 ## Website images
 Front page
-![front page](readmepics/frontpage.png)
+![frontpage](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/a97f2058-2682-498e-922f-69a88c6a7e4e)
+
+
 
 Regiser
 ![Register](readmepics/register.png)
