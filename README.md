@@ -1,4 +1,3 @@
-![frontpage](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/01e6d99f-cba0-472d-beca-2f8e5398109a)# Legacy-project 
 ## Summary
 The  purpose of the project is the user to upload pictures that he wants to share with other people. He can upload pictures from his device or from internet as well. The user can write a comment under each picture and also like his/her picture. When the picture is liked its being transported to the page called favourite pictures.
 
