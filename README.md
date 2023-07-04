@@ -1,4 +1,4 @@
-# Legacy-project 
+![frontpage](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/01e6d99f-cba0-472d-beca-2f8e5398109a)# Legacy-project 
 ## Summary
 The  purpose of the project is the user to upload pictures that he wants to share with other people. He can upload pictures from his device or from internet as well. The user can write a comment under each picture and also like his/her picture. When the picture is liked its being transported to the page called favourite pictures.
 
@@ -17,19 +17,24 @@ The  purpose of the project is the user to upload pictures that he wants to shar
 
 ## Website images
 Front page
-![frontpage](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/a97f2058-2682-498e-922f-69a88c6a7e4e)
+![frontpage](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/355a1d2d-112a-4741-b00b-7c1d0b398baa)
+
 
 
 
 Regiser
-![register](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/de40f26c-37b9-4244-89e3-8f88ebce59f9)
+![register](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/5e983f54-ef30-41b7-be42-4f4921dbdf58)
+
 
 Login
-![login](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/f394392a-c0ea-474e-b5a4-66d9f07c787d)
+![login](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/4530e30d-cd58-4d32-b91c-86015b96bd9e)
+
 
 Add photo
-![addphoto](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/1dd46cea-ab2d-45d8-80b3-df77926b9169)
+![addphoto](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/2b116587-9b61-40ef-abb5-abd75cb31a02)
+
 
 Display pictures
-![displayphoto](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/9e936d0c-c684-43db-aa5c-4bb3130824d9)
+![displayphoto](https://github.com/Guillaumelkl/Legacy-project/assets/117196462/53a62e2d-35dd-4507-baca-9c371d9bb7be)
+
 
